@@ -1,0 +1,175 @@
+/* CSS Variables */
+
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--primary);
+    color: var(--dark);
+    font-size: 1.1em;
+    line-height: 1.5;
+    width: 100%
+}
+
+header {
+    background-image: url(background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    z-index: -1;
+}
+
+header h1 {
+    color: var(--light);
+    margin-left: 10px;
+    font-size: 250%;
+    text-align: left;
+}
+
+header .nav {
+    float: right;
+    position: absolute;
+    top: 0;
+    font-size: 150%;
+    margin-top: 20px;
+    ;
+}
+
+main {
+    margin: 50px 100px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns:
+        2fr 1fr;
+}
+
+main ul {
+    list-style: none;
+    margin: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+    {
+    margin: 0;
+    padding: 1em 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    right: 0;
+    margin-top: 25px;
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--light);
+    padding: 5px 20px;
+    border: 1px solid var(--light);
+    transition: 0.6s ease;
+    text-shadow: 0 0 5px var(--dark);
+}
+
+li a:hover {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+li.active a {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+#section-a ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.zeiten {
+    text-align: center;
+}
+
+.leistungen {
+    display: none;
+}
+
+.card {
+    padding: 1em;
+    display: block;
+    grid-template-columns: repeat(auto-fit, minmax (50px, 1fr));
+}
+
+#section-b {
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+}
+
+#section-b ul {
+    list-style: none;
+    padding: 0;
+}
+
+#section-b li {
+    padding: 15px;
+}
+
+.banner {
+    grid-column: 1 / span 2;
+}
+
+footer {
+    padding-top: 1px;
+    padding-bottom: 20px;
+    margin: 0;
+    font-size: 150%;
+    background-color: black;
+}
+
+.content-wrap {
+    grid-column: 1 / span 3;
+}
+
+.content-wrap img {
+    max-height: auto;
+    width: 100%;
+}
+
+@media(max-width:600px) {
+    .nav {
+        z-index: -5;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}

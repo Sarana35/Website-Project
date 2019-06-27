@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes">
+    <link rel="stylesheet" href="../style3.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../menu2.css">
+    <title>Kontakt</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        form div {
+            display: flex;
+            flex-direction: row;
+            flex-flow: wrap;
+            margin: 1em;
+        }
+
+        form div label {
+            flex: 0 0 8.5em;
+            font-weight: bold;
+        }
+
+
+        form select,
+        form input,
+        form textarea {
+            flex: 1 1 20em;
+            padding: 4px;
+            border: 1px dotted black;
+            border-radius: 20px;
+            background-color: aliceblue;
+            color: midnightblue;
+        }
+
+        form button {
+            border-radius: 50%;
+            background-color: lightsteelblue;
+            border: 1px dotted midnightblue;
+        }
+
+        form select:focus,
+        form input:focus,
+        form textarea:focus,
+        form button:focus {
+            background-color: white;
+        }
+
+        .required {
+            color: red;
+            font-size: 150%;
+        }
+
+        .red {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header id="header" class="grid">
+        <ul class="nav">
+            <li class="active"><a href="../index.html">Startseite</a></li>
+            <li><a href="../ueberuns/index.html">Über uns</a></li>
+            <li><a href="../leistungen/index.html">Leistungen</a></li>
+            <li><a href="../oeffnungszeiten/index.html">Öffnungszeiten</a></li>
+            <li><a href="index.html">Kontakt</a></li>
+        </ul>
+        <div class="menu-wrap">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger">
+                <div></div>
+            </div>
+
+            <div class="menu">
+                <div>
+                    <div>
+                        <ul>
+                            <li class="active"><a href="../index.html">Startseite</a></li>
+                            <li><a href="../ueberuns/index.html">Über uns</a></li>
+                            <li><a href="../leistungen/index.html">Leistungen</a></li>
+                            <li><a href="../oeffnungszeiten/index.html">Öffnungszeiten</a></li>
+                            <li><a href="index.html">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h1 class="content-title">KONTAKT</h1>
+
+    </header>
+
+    <main id="main">
+        <section id="section-a" class="grid">
+
+            <div class="main">
+
+
+                <form action="contact.php" method="post">
+                    <p>Bei Fragen und Anregungen füllen Sie bitte dieses Formular aus. Wir werden uns bemühen, umgehend zu antworten.</p>
+
+                    <div>
+                        <label for="salut">Anrede: <span class="required">*</span></label>
+                        <select id="salut" name="salut" required>
+                            <!-- id= wegen CSS | name= wegen php -->
+                            <option disabled selected value>Ihre Anrede</option>
+                            <option>Frau</option>
+                            <option>Herr</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="lname">Nachname: <span class="required">*</span></label>
+                        <input id="lname" name="lname" type="text" maxlength="50" required placeholder="Ihr Nachname">
+                    </div>
+
+                    <div>
+                        <label for="fname">Vorname: <span class="required">*</span></label>
+                        <input id="fname" name="fname" type="text" maxlength="50" required placeholder="Ihr Vorname">
+                    </div>
+
+                    <div>
+                        <label for="email">E-Mail: <span class="required">*</span></label>
+                        <input id="email" name="email" type="email" maxlength="50" required placeholder="&#9993; Ihre E-Mail-Adresse">
+                    </div>
+
+                    <div>
+                        <label for="phone">Telefon:</label>
+                        <input id="phone" name="phone" type="tel" placeholder="&#9990; Ihre Telefonnummer">
+                    </div>
+
+                    <div>
+                        <label for="message">Ihre Nachricht: <span class="required">*</span></label>
+                        <textarea id="message" name="message" maxlength="1000" cols="30" rows="10" required placeholder="Ihre Nachricht"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="button">Hier klicken zum absenden:</label>
+                        <button id="button" name="button" type="submit">Senden</button>
+                    </div>
+
+                </form>
+
+                <p><span class="required">*</span> <span class="red">= Pflichtfeld</span></p>
+
+            </div>
+
+        </section>
+
+        <section id="section-b" class="grid">
+            <ul>
+                <li>
+                    <div class="article">
+                        <img>
+                        <div class="article-content">
+                            <h1 class="title">Kontaktdaten</h1>
+                            <p>Beispielfirma<br>
+                                Musterweg 10<br>
+                                90210 Musterstadt</p>
+
+                            <p>Telefon: +49 (0) 123 44 55 66<br>
+                                E-Mail: info@beispielfirma.de</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="article">
+                        <img>
+                        <div class="article-content">
+                            <h1 class="title">Aktuelles</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo, earum nulla maxime expedita itaque dolore eveniet consectetur recusandae nisi.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="article">
+                        <img>
+                        <div class="article-content">
+                            <h1 class="title">Tierheim</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum molestiae eius velit fugiat asperiores natus hic ducimus, sunt nobis voluptatem?</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <div class="banner">
+            <img src="../banner.png" alt="">
+        </div>
+
+    </main>
+
+    <footer id="footer" class="grid">
+        <ul>
+            <li><a href="../impressum/index.html">Impressum</a></li>
+            <li><a href="../datenschutz/index.html">Datenschutz</a></li>
+        </ul>
+    </footer>
+
+</body></html>
